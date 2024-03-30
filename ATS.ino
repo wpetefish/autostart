@@ -46,7 +46,7 @@ void loop() {
   while (RUN_EN == LOW, ENGINE == HIGH){  // IF no work, (RUN_EN == LOW && SHUTDOWN == HIGH) for 2 pin solution
     COOL();
   }
-  
+
   while (RUN_EN == LOW){
       SR();
   }
@@ -80,8 +80,9 @@ void WU(){
   digitalWrite(START, LOW);
 }
 
-void CLOSE(){
-  while (RUN_EN == HIGH, ENGINE == LOW){
+// Close contactor while checking for engine being up to speed
+void CLOSE(){ 
+  while (RUN_EN == HIGH, ENGINE == LOW){ // wait for engine to be up to speed... this is evident by the genset output voltage before contactor being 120v
     delay (500);
   }
   digitalWrite(POWER, HIGH); // Close contator
