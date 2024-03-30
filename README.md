@@ -1,4 +1,4 @@
-# autostart
+# Autostart
 Universal MEP autostart
 A universal autostart controller for MEP-1030, MEP-1040, MEP-1050, MEP-1060, and MEP-1070... for now.
 
