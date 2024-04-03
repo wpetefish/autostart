@@ -52,7 +52,7 @@ void loop() {
     COOL();
   }
 
-  while (RUN_EN == LOW){
+  while (RUN_EN == LOW, ENGINE == LOW){
       SR();
   }
 }
